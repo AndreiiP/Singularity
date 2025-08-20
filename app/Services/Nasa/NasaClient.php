@@ -94,7 +94,6 @@ class NasaClient
                 ->acceptJson()
                 ->get($url, $params);
 
-            // выбросить исключение на 4xx/5xx
             $resp->throw();
 
             return $resp->json() ?? [];
